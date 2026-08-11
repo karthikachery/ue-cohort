@@ -19,6 +19,7 @@
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  --slate-700: #334155;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -326,8 +327,10 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-main .section.highlight {
-    h1{
-        color: red;
+main .section.intro-section {
+    p{
+      text-align: center;
+      color: var(--slate-700);
+      font-size: var(--heading-font-size-s);
     }
 }
