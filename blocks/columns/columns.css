@@ -76,21 +76,25 @@
   color: var(--slate-900);
 }
 
-.columns.feature-card > div > div:not(.columns-img-col) p em {
-  font-style: normal;
-  display: inline-block;
+.columns.feature-card > div > div:not(.columns-img-col) ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 20px;
+  padding: 0;
+}
+
+.columns.feature-card > div > div:not(.columns-img-col) ul li {
   padding: 4px 12px;
   border: 1px solid var(--slate-200);
   border-radius: 9999px;
   font-size: 12px;
   font-weight: 600;
   color: var(--slate-500);
-  margin-right: 8px;
 }
 
 .columns.feature-card > div > div:not(.columns-img-col) p:last-child a {
-  margin-top: 20px;
   display: inline-flex;
   font-size: 14px;
   font-weight: 600;
