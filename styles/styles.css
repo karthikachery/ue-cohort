@@ -323,3 +323,9 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+main .section.color-header {
+    h1{
+        color: red;
+    }
+}
