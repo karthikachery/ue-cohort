@@ -13,6 +13,7 @@
 :root {
   /* colors */
   --background-color: white;
+  --body-bg: #f7f3ea;
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
@@ -29,6 +30,7 @@
   --body-font-size-xs: 17px;
 
   /* heading sizes */
+  --heading-font-size-3xl: 60px;
   --heading-font-size-xxl: 55px;
   --heading-font-size-xl: 44px;
   --heading-font-size-l: 34px;
@@ -73,7 +75,7 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background-color: var(--body-bg);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
