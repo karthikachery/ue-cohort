@@ -47,8 +47,8 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .2em;
-    background: rgba(239, 139, 61, .16);
-    background-color: rgb(255 255 255 / 0.1);
+    background: rgb(239 139 61 / 16%);
+    background-color: rgb(255 255 255 / 10%);
   }
   
 }
