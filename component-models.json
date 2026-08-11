@@ -180,6 +180,17 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Feature Card",
+            "value": "feature-card"
+          }
+        ]
       }
     ]
   },

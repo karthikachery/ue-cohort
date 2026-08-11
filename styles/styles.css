@@ -20,6 +20,13 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
   --slate-700: #334155;
+  --slate-900: #0f172a;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-200: #e2e8f0;
+  --emerald-700: #047857;
+  --amber-600: #d97706;
+  --emarald-700: #047857;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
