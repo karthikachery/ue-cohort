@@ -61,7 +61,8 @@
         "text",
         "image",
         "button",
-        "title"
+        "title",
+        "newsletter"
       ]
     }
   ]

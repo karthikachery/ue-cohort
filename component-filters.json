@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "newsletter"
     ]
   },
   {
@@ -36,7 +37,8 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "newsletter"
     ]
   }
 ]
