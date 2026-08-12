@@ -93,3 +93,45 @@ footer .footer .default-content-wrapper a:hover {
     justify-content: space-between;
   }
 }
+
+footer .footer-newsletter {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+footer .footer-newsletter input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 20px;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 9999px;
+  background-color: rgb(255 255 255 / 5%);
+  font-size: 14px;
+  color: var(--background-color);
+}
+
+footer .footer-newsletter input::placeholder {
+  color: var(--slate-400);
+}
+
+footer .footer-newsletter input:focus {
+  outline: none;
+  border-color: var(--slate-400);
+}
+
+footer .footer-newsletter button {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9999px;
+  background-color: var(--amber-500);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--slate-950);
+  cursor: pointer;
+}
+
+footer .footer-newsletter button:hover {
+  background-color: var(--amber-600);
+}
