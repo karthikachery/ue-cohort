@@ -95,7 +95,11 @@ export default function decorate(block) {
     }
 
     authorEl.append(infoEl);
-    slide.append(quoteEl, authorEl);
+
+    const card = document.createElement('div');
+    card.className = 'testimonials-card';
+    card.append(quoteEl, authorEl);
+    slide.append(card);
     track.append(slide);
     slides.push(slide);
   });
