@@ -41,14 +41,15 @@ export default function decorate(block) {
     moveInstrumentation(row, slide);
 
     const cols = [...row.children];
-    // Expected structure per row (4 columns):
+    // AEM delivers 4 columns:
     // Col 0: quote text
-    // Col 1: avatar image
-    // Col 2: name
-    // Col 3: rating and badge (e.g. "4.8/5 · Verified buyer")
+    // Col 1: avatar image (reference + altText collapsed into one cell)
+    // Col 2: customer name
+    // Col 3: rating & badge
 
     const quote = cols[0]?.textContent?.trim() || '';
     const avatarPic = cols[1]?.querySelector('picture');
+    const avatarImg = avatarPic?.querySelector('img');
     const name = cols[2]?.textContent?.trim() || '';
     const ratingAndBadge = cols[3]?.textContent?.trim() || '';
 
@@ -67,9 +68,9 @@ export default function decorate(block) {
     authorEl.className = 'testimonials-author';
 
     if (avatarPic) {
-      const img = avatarPic.querySelector('img');
-      if (img) {
-        const optimized = createOptimizedPicture(img.src, name, false, [{ width: '80' }]);
+      if (avatarImg) {
+        const altText = avatarImg.alt || name;
+        const optimized = createOptimizedPicture(avatarImg.src, altText, false, [{ width: '80' }]);
         optimized.className = 'testimonials-avatar';
         authorEl.append(optimized);
       }

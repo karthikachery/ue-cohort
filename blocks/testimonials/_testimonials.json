@@ -53,8 +53,16 @@
         {
           "component": "text",
           "valueType": "string",
+          "name": "avatarAlt",
+          "label": "Image Alt Text",
+          "description": "Descriptive alt text for the avatar image, e.g. Photo of Aarav S."
+        },
+        {
+          "component": "text",
+          "valueType": "string",
           "name": "name",
-          "label": "Customer Name"
+          "label": "Customer Name",
+          "description": "Name displayed below the quote"
         },
         {
           "component": "text",
