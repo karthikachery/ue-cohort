@@ -229,5 +229,22 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "newsletter",
+    "fields": [
+      {
+        "component": "text",
+        "name": "placeholder",
+        "label": "Input Placeholder",
+        "value": "Email address"
+      },
+      {
+        "component": "text",
+        "name": "buttonLabel",
+        "label": "Button Label",
+        "value": "Join"
+      }
+    ]
   }
 ]

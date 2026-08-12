@@ -23,10 +23,15 @@
   --slate-900: #0f172a;
   --slate-600: #475569;
   --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
   --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-950: #020617;
   --emerald-700: #047857;
+  --amber-500: #f59e0b;
   --amber-600: #d97706;
-  --emarald-700: #047857;
+  --footer-bg: #0f3d2e;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
