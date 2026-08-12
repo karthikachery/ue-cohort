@@ -16,48 +16,6 @@ footer .footer .columns > div {
   gap: 40px;
 }
 
-footer .footer .columns > div > div:first-child {
-  grid-column: span 1;
-}
-
-footer .footer .columns > div > div:first-child img {
-  height: 56px;
-  width: auto;
-}
-
-footer .footer .columns > div > div:first-child p {
-  margin-top: 12px;
-  max-width: 280px;
-  font-size: 14px;
-  line-height: 28px;
-  color: var(--slate-300);
-}
-
-footer .footer .columns > div > div p strong {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  color: var(--slate-400);
-}
-
-footer .footer .columns > div > div p {
-  margin: 0;
-  margin-top: 8px;
-  font-size: 14px;
-  color: var(--slate-300);
-}
-
-footer .footer .columns > div > div p a {
-  color: var(--slate-300);
-  text-decoration: none;
-}
-
-footer .footer .columns > div > div p a:hover {
-  color: var(--background-color);
-}
-
 footer .footer .default-content-wrapper {
   margin-top: 40px;
   padding-top: 24px;
@@ -74,8 +32,50 @@ footer .footer .default-content-wrapper a {
   text-decoration: none;
 }
 
+footer .footer .columns > div > div p {
+  margin: 0;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--slate-300);
+}
+
+footer .footer .columns > div > div p strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--slate-400);
+}
+
+footer .footer .columns > div > div p a {
+  color: var(--slate-300);
+  text-decoration: none;
+}
+
 footer .footer .default-content-wrapper a:hover {
   color: var(--background-color);
+}
+
+footer .footer .columns > div > div p a:hover {
+  color: var(--background-color);
+}
+
+footer .footer .columns > div > div:first-child {
+  grid-column: span 1;
+}
+
+footer .footer .columns > div > div:first-child img {
+  height: 56px;
+  width: auto;
+}
+
+footer .footer .columns > div > div:first-child p {
+  margin-top: 12px;
+  max-width: 280px;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--slate-300);
 }
 
 @media (width >= 900px) {

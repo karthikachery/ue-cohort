@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "newsletter"
+      "newsletter",
+      "testimonials"
     ]
   },
   {
@@ -39,6 +40,12 @@
       "button",
       "title",
       "newsletter"
+    ]
+  },
+  {
+    "id": "testimonials",
+    "components": [
+      "testimonial"
     ]
   }
 ]

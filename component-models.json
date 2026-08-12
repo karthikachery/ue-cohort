@@ -246,5 +246,38 @@
         "value": "Join"
       }
     ]
+  },
+  {
+    "id": "testimonial",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "quote",
+        "label": "Quote",
+        "description": "The testimonial quote text"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "avatar",
+        "label": "Avatar",
+        "description": "Customer avatar image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Customer Name"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rating",
+        "label": "Rating and Badge",
+        "description": "Rating and badge, e.g. 4.8/5 · Verified buyer"
+      }
+    ]
   }
 ]
