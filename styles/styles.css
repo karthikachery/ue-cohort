@@ -32,6 +32,7 @@
   --amber-500: #f59e0b;
   --amber-600: #d97706;
   --footer-bg: #0f3d2e;
+  --text-red-color: #b91c1c;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -345,4 +346,8 @@ main .section.intro-section {
       color: var(--slate-700);
       font-size: var(--heading-font-size-s);
     }
+}
+
+main .text-red {
+  color: var(--text-red-color);
 }
