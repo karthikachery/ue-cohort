@@ -81,6 +81,28 @@
     ]
   },
   {
+    "id": "text",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Text Color",
+        "value": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Red",
+            "value": "text-red"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "button",
     "fields": [
       {
@@ -142,6 +164,23 @@
             "value": "intro-section"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "label",
+        "label": "Label",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "label": "Body",
+        "valueType": "string"
       }
     ]
   },
