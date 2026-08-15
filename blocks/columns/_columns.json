@@ -62,7 +62,8 @@
         "image",
         "button",
         "title",
-        "newsletter"
+        "newsletter",
+        "section"
       ]
     }
   ]
