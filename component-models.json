@@ -177,7 +177,7 @@
         "valueType": "string"
       },
       {
-        "component": "richtext",
+        "component": "text",
         "name": "body",
         "label": "Body",
         "valueType": "string"
