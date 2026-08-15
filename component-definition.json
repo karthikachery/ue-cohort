@@ -85,7 +85,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Accordion",
+          "title": "Accordion-T",
           "id": "accordion",
           "plugins": {
             "xwalk": {
