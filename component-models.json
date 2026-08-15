@@ -81,6 +81,28 @@
     ]
   },
   {
+    "id": "text",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Text Color",
+        "value": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Red",
+            "value": "text-red"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "button",
     "fields": [
       {

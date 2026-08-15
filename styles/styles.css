@@ -341,6 +341,7 @@ main .section.highlight {
 }
 
 main .section.intro-section {
+    text-align: center;
     p{
       text-align: center;
       color: var(--slate-700);
