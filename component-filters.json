@@ -13,7 +13,6 @@
       "button",
       "title",
       "hero",
-      "hero-carousel",
       "cards",
       "columns",
       "fragment",
@@ -48,12 +47,6 @@
       "button",
       "title",
       "newsletter"
-    ]
-  },
-  {
-    "id": "hero-carousel",
-    "components": [
-      "hero-carousel-slide"
     ]
   },
   {
