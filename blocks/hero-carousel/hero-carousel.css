@@ -34,7 +34,7 @@
 
 /* Remove section wrapper constraints */
 .hero-carousel-container .hero-carousel-wrapper {
-  max-width: unset;
+  max-width: 1200px;
   padding: 0;
 }
 
