@@ -52,6 +52,7 @@
         "button",
         "title",
         "hero",
+        "hero-carousel",
         "cards",
         "columns",
         "fragment",
