@@ -81,6 +81,28 @@
     ]
   },
   {
+    "id": "text",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Text Color",
+        "value": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Red",
+            "value": "text-red"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "button",
     "fields": [
       {
@@ -201,6 +223,49 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-carousel-slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "description": "Full-bleed background image for the slide",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundImageAlt",
+        "label": "Background Image Alt",
+        "description": "Alt text for the background image"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Content",
+        "valueType": "string",
+        "description": "Slide content: eyebrow paragraph, heading, description, and CTA links"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "sideImage",
+        "label": "Side Image",
+        "description": "Optional image displayed beside the text (two-column layout)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "sideImageAlt",
+        "label": "Side Image Alt",
+        "description": "Alt text for the side image"
       }
     ]
   },
