@@ -43,6 +43,12 @@
     ]
   },
   {
+    "id": "hero-carousel",
+    "components": [
+      "hero-carousel-slide"
+    ]
+  },
+  {
     "id": "testimonials",
     "components": [
       "testimonial"
