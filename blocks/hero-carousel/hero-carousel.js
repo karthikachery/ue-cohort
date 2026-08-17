@@ -49,19 +49,27 @@ function buildSlide(row) {
   textCol.className = 'hero-carousel-text';
 
   if (contentCol) {
-    const children = [...contentCol.children];
+    // Collect all content elements: check direct children first,
+    // but if there's a single wrapper div (no semantic meaning), look inside it.
+    let children = [...contentCol.children];
+    if (children.length === 1 && children[0].tagName === 'DIV') {
+      children = [...children[0].children];
+    }
+    let headingFound = false;
+
     children.forEach((child) => {
       const clone = child.cloneNode(true);
       // Style eyebrow: first <p> that has no links and is short text
-      if (clone.tagName === 'P' && !clone.querySelector('a') && clone.textContent.trim().length < 80 && textCol.children.length === 0) {
+      if (clone.tagName === 'P' && !clone.querySelector('a') && clone.textContent.trim().length < 80 && !headingFound) {
         clone.className = 'hero-carousel-eyebrow';
       }
       // Style headings
       if (/^H[1-6]$/.test(clone.tagName)) {
         clone.className = 'hero-carousel-heading';
+        headingFound = true;
       }
       // Style description paragraphs (non-link paragraphs after heading)
-      if (clone.tagName === 'P' && !clone.querySelector('a') && textCol.querySelector('.hero-carousel-heading')) {
+      if (clone.tagName === 'P' && !clone.querySelector('a') && headingFound) {
         clone.className = 'hero-carousel-description';
       }
       // Style CTA links in paragraphs
