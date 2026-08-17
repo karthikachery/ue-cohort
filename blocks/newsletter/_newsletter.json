@@ -22,6 +22,20 @@
       "fields": [
         {
           "component": "text",
+          "name": "eyebrow",
+          "label": "Eyebrow",
+          "value": "Find your next adventure",
+          "description": "Small label above the heading"
+        },
+        {
+          "component": "text",
+          "name": "heading",
+          "label": "Heading",
+          "value": "Trail-tested advice, new arrivals, and seasonal offers — in your inbox.",
+          "description": "Main heading text"
+        },
+        {
+          "component": "text",
           "name": "placeholder",
           "label": "Input Placeholder",
           "value": "Email address"
