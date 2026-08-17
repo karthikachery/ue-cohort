@@ -162,6 +162,10 @@
           {
             "name": "Intro Section",
             "value": "intro-section"
+          },
+          {
+            "name": "Trust Bar",
+            "value": "trust-bar"
           }
         ]
       }
@@ -244,6 +248,49 @@
     ]
   },
   {
+    "id": "hero-carousel-slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "description": "Full-bleed background image for the slide",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundImageAlt",
+        "label": "Background Image Alt",
+        "description": "Alt text for the background image"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Content",
+        "valueType": "string",
+        "description": "Slide content: eyebrow paragraph, heading, description, and CTA links"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "sideImage",
+        "label": "Side Image",
+        "description": "Optional image displayed beside the text (two-column layout)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "sideImageAlt",
+        "label": "Side Image Alt",
+        "description": "Alt text for the side image"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
@@ -272,6 +319,20 @@
   {
     "id": "newsletter",
     "fields": [
+      {
+        "component": "text",
+        "name": "eyebrow",
+        "label": "Eyebrow",
+        "value": "Find your next adventure",
+        "description": "Small label above the heading"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "value": "Trail-tested advice, new arrivals, and seasonal offers — in your inbox.",
+        "description": "Main heading text"
+      },
       {
         "component": "text",
         "name": "placeholder",

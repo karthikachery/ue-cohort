@@ -1,0 +1,287 @@
+/* Hero Carousel Block */
+
+/* Block-specific color variables and root styles */
+.hero-carousel {
+  --hero-carousel-bg-start: #0f3d2e;
+  --hero-carousel-bg-mid: #1c4636;
+  --hero-carousel-bg-end: #6c8b64;
+  --hero-carousel-text: #fff;
+  --hero-carousel-text-muted: #f1f5f9;
+  --hero-carousel-btn-primary-bg: var(--amber-500);
+  --hero-carousel-btn-primary-text: var(--slate-950);
+  --hero-carousel-btn-secondary-border: rgb(255 255 255 / 30%);
+  --hero-carousel-btn-secondary-text: #fff;
+  --hero-carousel-dot-active: var(--amber-500);
+  --hero-carousel-dot-inactive: rgb(255 255 255 / 30%);
+  --hero-carousel-radius: 2.3rem;
+  --hero-carousel-height: 520px;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--hero-carousel-radius);
+  color: var(--hero-carousel-text);
+  height: var(--hero-carousel-height);
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 10%),
+    0 8px 10px -6px rgb(0 0 0 / 10%);
+  background: linear-gradient(
+    to right,
+    var(--hero-carousel-bg-start),
+    var(--hero-carousel-bg-mid),
+    var(--hero-carousel-bg-end)
+  );
+}
+
+/* Remove section wrapper constraints */
+.hero-carousel-container .hero-carousel-wrapper {
+  max-width: 1200px;
+  padding: 0;
+}
+
+/* Track holds all slides */
+.hero-carousel .hero-carousel-track {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Individual slide */
+.hero-carousel .hero-carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.hero-carousel .hero-carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Background image */
+.hero-carousel .hero-carousel-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-carousel .hero-carousel-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradient overlay on top of background images */
+.hero-carousel .hero-carousel-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgb(15 61 46 / 90%),
+    rgb(15 61 46 / 30%),
+    transparent
+  );
+}
+
+/* Content area */
+.hero-carousel .hero-carousel-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+/* Two-column grid layout (when side image is present) */
+.hero-carousel .hero-carousel-content-grid {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text column */
+.hero-carousel .hero-carousel-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Eyebrow */
+.hero-carousel .hero-carousel-eyebrow {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background: rgb(255 255 255 / 10%);
+  color: var(--hero-carousel-text);
+}
+
+/* Heading */
+.hero-carousel .hero-carousel-heading {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--hero-carousel-text);
+  font-family: var(--heading-font-family);
+  max-width: 48rem;
+}
+
+/* Description */
+.hero-carousel .hero-carousel-description {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--hero-carousel-text-muted);
+  max-width: 42rem;
+}
+
+/* CTAs */
+.hero-carousel .hero-carousel-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.hero-carousel .hero-carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-carousel .hero-carousel-btn:hover {
+  transform: translateY(-1px);
+}
+
+.hero-carousel .hero-carousel-btn-primary {
+  background-color: var(--hero-carousel-btn-primary-bg);
+  color: var(--hero-carousel-btn-primary-text);
+  border: 2px solid var(--hero-carousel-btn-primary-bg);
+}
+
+.hero-carousel .hero-carousel-btn-primary:hover {
+  background-color: var(--amber-600);
+  border-color: var(--amber-600);
+}
+
+.hero-carousel .hero-carousel-btn-secondary {
+  background-color: transparent;
+  color: var(--hero-carousel-btn-secondary-text);
+  border: 2px solid var(--hero-carousel-btn-secondary-border);
+}
+
+.hero-carousel .hero-carousel-btn-secondary:hover {
+  background-color: rgb(255 255 255 / 10%);
+  border-color: rgb(255 255 255 / 50%);
+}
+
+/* Side image */
+.hero-carousel .hero-carousel-side-image {
+  display: none;
+  overflow: hidden;
+  border-radius: 1.6rem;
+  border: 1px solid rgb(255 255 255 / 15%);
+}
+
+.hero-carousel .hero-carousel-side-image img {
+  width: 100%;
+  height: 288px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dot navigation */
+.hero-carousel .hero-carousel-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.hero-carousel .hero-carousel-dot {
+  width: 1.5rem;
+  height: 0.625rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--hero-carousel-dot-inactive);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-carousel .hero-carousel-dot.active {
+  background-color: var(--hero-carousel-dot-active);
+}
+
+.hero-carousel .hero-carousel-dot:hover {
+  background-color: rgb(255 255 255 / 60%);
+}
+
+.hero-carousel .hero-carousel-dot:focus-visible {
+  outline: 2px solid var(--hero-carousel-dot-active);
+  outline-offset: 2px;
+}
+
+/* -------- Tablet (600px+) -------- */
+@media (width >= 600px) {
+  .hero-carousel {
+    --hero-carousel-height: 480px;
+  }
+
+  .hero-carousel .hero-carousel-heading {
+    font-size: 2.5rem;
+  }
+
+  .hero-carousel .hero-carousel-content {
+    padding: 40px 32px;
+  }
+}
+
+/* -------- Desktop (900px+) -------- */
+@media (width >= 900px) {
+  .hero-carousel .hero-carousel-heading {
+    font-size: 3rem;
+  }
+
+  .hero-carousel .hero-carousel-content {
+    padding: 40px;
+  }
+
+  /* Two-column grid on desktop */
+  .hero-carousel .hero-carousel-content-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* Show side image on desktop */
+  .hero-carousel .hero-carousel-side-image {
+    display: block;
+  }
+}
