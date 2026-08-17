@@ -37,10 +37,6 @@
             {
               "name": "Intro Section",
               "value": "intro-section"
-            },
-            {
-              "name": "Trust Bar",
-              "value": "trust-bar"
             }
           ]
         }
@@ -56,7 +52,6 @@
         "button",
         "title",
         "hero",
-        "hero-carousel",
         "cards",
         "columns",
         "fragment",
