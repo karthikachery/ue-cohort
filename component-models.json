@@ -204,6 +204,17 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Rounded Corners",
+            "value": "rounded-corners"
+          }
+        ]
       }
     ]
   },
