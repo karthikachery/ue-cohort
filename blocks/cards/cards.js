@@ -12,34 +12,29 @@ export default function decorate(block) {
     while (row.firstElementChild) li.append(row.firstElementChild);
 
     [...li.children].forEach((div) => {
-      const text = div.textContent.trim();
-      // multiselect values may come through as comma/space separated in one cell
-      const values = text
-        .split(/[,\s]+/)
-        .map((v) => v.trim())
-        .filter(Boolean);
+      // multiselect renders as <div><ul><li>value</li>...</ul></div>
+      // single-select renders as plain text in the div
+      const nestedList = div.querySelector(':scope > ul');
+      const values = nestedList
+        ? [...nestedList.children].map((item) => item.textContent.trim())
+        : [div.textContent.trim()];
+
       const matchedStyles = values.filter((v) => STYLE_OPTIONS.includes(v));
 
       if (matchedStyles.length && matchedStyles.length === values.length) {
-        // the whole cell was style values, so this div isn't card content
         li.classList.add(...matchedStyles);
         div.remove();
       }
     });
 
     [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) {
-        div.className = 'cards-card-image';
-      } else {
-        div.className = 'cards-card-body';
-      }
+      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
+      else div.className = 'cards-card-body';
     });
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => {
-    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [
-      { width: '750' },
-    ]);
+    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
   });
