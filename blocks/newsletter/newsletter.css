@@ -1,6 +1,6 @@
 /* Newsletter Block */
 .newsletter-container .newsletter-wrapper {
-  max-width: unset;
+  max-width: 1200px;
   padding: 0;
 }
 
