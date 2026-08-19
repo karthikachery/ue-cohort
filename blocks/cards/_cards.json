@@ -50,13 +50,18 @@
           "valueType": "string"
         },
         {
-          "component": "select",
+          "component": "multiselect",
           "name": "style",
           "label": "Style",
+          "valueType": "string",
           "options": [
             {
               "name": "Rounded Corners",
               "value": "rounded-corners"
+            },
+            {
+              "name": "Link Style Black",
+              "value": "link-style-black"
             }
           ]
         }
