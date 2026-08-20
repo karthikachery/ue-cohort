@@ -25,3 +25,17 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards .rounded-corners {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cards .rounded-corners .cards-card-image img {
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.link-style-black a:any-link{
+  color: #000;
+}
